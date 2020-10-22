@@ -1,0 +1,35 @@
+.nav-element {
+  list-style-type: none;
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  border: 2px solid #294c60;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.nav-element .nav-button {
+  text-decoration: none;
+  color: #001b2e;
+  outline: none;
+}
+
+.navbar {
+  background: #adb6c4;
+  overflow: hidden;
+  border-bottom: 2px solid #294c60;
+}
+
+#logo {
+  float: left;
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+.button-list {
+  margin-right: 10vw;
+}
+/*# sourceMappingURL=Navbar.css.map */
