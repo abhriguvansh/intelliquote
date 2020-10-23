@@ -4,9 +4,8 @@ import Navbar from '../Navbar/Navbar'
 import {
   Link
 
-} from 'react-router-dom';
-
-function LandingPage(){
+} from 'react-router-dom'
+function LandingP age(){
     return(
         <div>
         <Navbar />
