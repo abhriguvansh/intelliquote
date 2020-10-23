@@ -10,6 +10,9 @@ E = Extroversion
 A = Agreeableness
 N = Neuroticism 
 
+If they choose an answer that does not signal an alignment towards one of the traits, the type is "a little bit of everything" since there is no strong affiliation
+
+
 
 */
 
@@ -25,11 +28,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Neutral'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Disagree'       
             }
         ]
