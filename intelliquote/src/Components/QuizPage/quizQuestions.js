@@ -15,7 +15,7 @@ N = Neuroticism
 
 
 
-let questions = [
+let quizQuestions = [
 
     {
         question: 'I Am the life of the party.',
@@ -103,3 +103,5 @@ let questions = [
         ]
     },
 ]
+
+export default quizQuestions;
