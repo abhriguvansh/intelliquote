@@ -8,7 +8,7 @@ const Question = props => {
         </div>
     )
 }
-Question.PropTypes = {
+Question.propTypes = {  
     content: PropTypes.string.isRequired
 }
 
