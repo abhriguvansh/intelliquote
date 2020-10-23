@@ -5,7 +5,7 @@ import {
   Link
 
 } from 'react-router-dom'
-function LandingP age(){
+function LandingPage(){
     return(
         <div>
         <Navbar />
