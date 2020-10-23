@@ -26,14 +26,14 @@ class QuizPage extends React.Component {
   this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
 
 }
-componentDidMount() {
-  const shuffledAnswerOptions = quizQuestions.map((question) => (question.answers));  
+ componentDidMount() {
+  
+    this.setState({
+      question: quizQuestions[0].question,
+      answerOptions: quizQuestions[0].answer
+    });
+  }
 
-  this.setState({
-    question: quizQuestions[0].question,
-    answerOptions: shuffledAnswerOptions[0]
-  });
-}
 
 
 
@@ -77,7 +77,7 @@ setNextQuestion() {
     counter: counter,
     questionId: questionId,
     question: quizQuestions[counter].question,
-    answerOptions: quizQuestions[counter].answers,
+    answerOptions: quizQuestions[counter].answer,
     answer: ''
   });
 }

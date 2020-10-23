@@ -25,11 +25,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Neutral'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Disagree'       
             }
         ]
@@ -42,11 +42,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Neutral'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Disagree'       
             }
         ]
@@ -59,11 +59,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Neutral'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Disagree'       
             }
         ]
@@ -76,11 +76,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Neutral'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Disagree'       
             }
         ]
@@ -93,11 +93,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Neutral'
             },
             {
-                type: '',
+                type: ' ',
                 content: 'Disagree'       
             }
         ]
