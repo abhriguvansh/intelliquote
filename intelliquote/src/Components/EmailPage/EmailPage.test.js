@@ -14,7 +14,7 @@ it('render email page', () => {
   render(
     <Router history = {history}>
       <EmailPage />
-    </Router>
+    </Router>   
   )
   expect(screen.getByText(/Email Page/i)).toBeInTheDocument()
   });
