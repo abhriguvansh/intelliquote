@@ -19,13 +19,13 @@ function LandingPage(){
                   required
                 />
               </div>
-            </div>
-            <div className='submit-div'>
+              <div className='submit-div'>
                 {' '}
-                <button type='submit' className='sbumit'>
+                <button type='submit' className='submit'>
                   submit
                 </button>
               </div>
+            </div>
         </div>
     )
 
