@@ -1,0 +1,69 @@
+$primary-color: #001b2e;
+$secondary-color: #adb6c4;
+$tertiary-color: #294c60;
+
+.quiz-div {
+  border: 2px solid $tertiary-color;
+  border-radius: 10px;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  background: #adb6c4;
+  text-align: center;
+}
+
+.questionCount {
+  display: inline-block;
+  color: $primary-color;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  border: 2px solid $primary-color;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.question-display {
+  color: $primary-color;
+  margin-bottom: 3rem;
+}
+.answerOption {
+  list-style: none;
+}
+.radioCustomLabel {
+  color: $primary-color;
+  font-size: 1.5rem;
+  border: 2px solid $tertiary-color;
+  padding: 0.6rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 125px;
+}
+
+.radioCustomButton {
+  display: none;
+}
+.answerOptions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2.5rem;
+}
+
+.result {
+  border: 2px solid $tertiary-color;
+  border-radius: 10px;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  background: #adb6c4;
+  text-align: center;
+  height: 250px;
+}
+.you-prefer {
+  display: block;
+
+  margin-top: 5rem;
+  .personality {
+    display: block;
+    font-size: 2rem;
+  }
+}

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Question = props => {
     return(
         <div>
-            <h1>{props.content}</h1>
+            <h1 className = 'question-display'>{props.content}</h1>
         </div>
     )
 }

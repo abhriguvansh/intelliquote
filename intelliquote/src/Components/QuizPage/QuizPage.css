@@ -1,1 +1,73 @@
-/* No CSS *//*# sourceMappingURL=QuizPage.css.map */
+.quiz-div {
+  border: 2px solid #294c60;
+  border-radius: 10px;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  background: #adb6c4;
+  text-align: center;
+}
+
+.questionCount {
+  display: inline-block;
+  color: #001b2e;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  border: 2px solid #001b2e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.question-display {
+  color: #001b2e;
+  margin-bottom: 3rem;
+}
+
+.answerOption {
+  list-style: none;
+}
+
+.radioCustomLabel {
+  color: #001b2e;
+  font-size: 1.5rem;
+  border: 2px solid #294c60;
+  padding: 0.6rem;
+  border-radius: 10px;
+  display: inline-block;
+  width: 125px;
+}
+
+.radioCustomButton {
+  display: none;
+}
+
+.answerOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 2.5rem;
+}
+
+.result {
+  border: 2px solid #294c60;
+  border-radius: 10px;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  background: #adb6c4;
+  text-align: center;
+  height: 250px;
+}
+
+.you-prefer {
+  display: block;
+  margin-top: 5rem;
+}
+
+.you-prefer .personality {
+  display: block;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=QuizPage.css.map */

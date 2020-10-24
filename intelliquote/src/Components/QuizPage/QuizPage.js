@@ -83,6 +83,7 @@ setNextQuestion() {
 }
 renderQuiz() {
   return (
+    <div className = 'quiz-div'>
     <Quiz
       answer={this.state.answer}
       answerOptions={this.state.answerOptions}
@@ -91,6 +92,7 @@ renderQuiz() {
       questionTotal={quizQuestions.length}
       onAnswerSelected={this.handleAnswerSelected}
     />
+      </div>
   );
 }
 

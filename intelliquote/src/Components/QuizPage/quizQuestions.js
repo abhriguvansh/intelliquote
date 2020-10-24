@@ -32,7 +32,7 @@ let quizQuestions = [
                 content: 'Neutral'
             },
             {
-                type: 'A little bit of everything',
+                type: 'A mix of everything',
                 content: 'Disagree'       
             }
         ]
@@ -45,11 +45,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Neutral'
             },
             {
-                type: ' ',
+                type: 'A mix of everything',
                 content: 'Disagree'       
             }
         ]
@@ -62,11 +62,11 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Neutral'
             },
             {
-                type: ' ',
+                type: 'A mix of everything',
                 content: 'Disagree'       
             }
         ]
@@ -79,28 +79,28 @@ let quizQuestions = [
                 content: 'Agree'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Neutral'
             },
             {
-                type: ' ',
+                type: 'A mix of everything',
                 content: 'Disagree'       
             }
         ]
     },
     {
-        question: 'Have a vivid imagination',
+        question: 'I Have a vivid imagination',
         answer: [
             {
-                type: 'A',
+                type: 'O',
                 content: 'Agree'
             },
             {
-                type: ' ',
+                type: 'A little bit of everything',
                 content: 'Neutral'
             },
             {
-                type: ' ',
+                type: 'A mix of everything',
                 content: 'Disagree'       
             }
         ]
