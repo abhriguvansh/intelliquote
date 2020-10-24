@@ -73,6 +73,62 @@ let quizQuestions = [
             }
         ]
     },
+    {
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+                content:'1. I am relaxed most of the time'
+            },
+            {
+                content: '2. I am interested in people'},
+            {
+                content:'3. I Am the life of the party'
+            }],
+        answer: [
+            {
+                type: 'Neuroticism',
+                content: '1'
+            },
+            {
+                type: 'Agreeableness',
+                content: '2'
+            },
+            {
+                type: 'Extroversion',
+                content: '3'       
+            }
+        ]
+    },
+    {
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+            content: '1. I Have a vivid imagination'
+            },
+            {
+                content: '2. I am interested in people'},
+            {
+                content:'3. I Am the life of the party'
+            }],
+        answer: [
+            {
+                type: 'Openness',
+                content: '1'
+            },
+            {
+                type: 'Agreeableness',
+                content: '2'
+            },
+            {
+                type: 'Extroversion',
+                content: '3'       
+            }
+        ]
+    },
    
 ]
 
