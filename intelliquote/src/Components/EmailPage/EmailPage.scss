@@ -16,7 +16,7 @@ $primary-color: #001b2e;
   }
 
 .email {
-  margin: 1rem;
+  margin: 2rem;
   margin-bottom: 4px;
   display: block;
   text-align: center;
@@ -60,4 +60,10 @@ $primary-color: #001b2e;
     text-align: center;
     border-radius: 15px;
     margin: 0.5em auto 0 auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    &:hover {
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+      }
   }
