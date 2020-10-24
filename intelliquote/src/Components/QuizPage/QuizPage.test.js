@@ -1,10 +1,12 @@
 
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event'
-import '@testing-library/jest-dom/extend-expect'
+import {shallow} from 'enzyme'
 import QuizPage from './QuizPage'
-import {Router} from 'react-router-dom'
-import {createMemoryHistory} from 'history'
+
+//tests that quiz page is rendered without crashing
+it('renders without crashing', () => {
+  shallow(<QuizPage />);
+});
+
 
 
