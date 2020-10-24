@@ -37,6 +37,14 @@ $tertiary-color: #294c60;
   border-radius: 10px;
   display: inline-block;
   width: 125px;
+  &:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+  }
+  &:active{
+    background-color: $tertiary-color;
+    transition-duration: 0.3s;
+  }
 }
 
 .radioCustomButton {

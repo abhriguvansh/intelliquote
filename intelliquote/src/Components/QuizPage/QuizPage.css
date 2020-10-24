@@ -37,6 +37,19 @@
   width: 125px;
 }
 
+.radioCustomLabel:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.radioCustomLabel:active {
+  background-color: #294c60;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
 .radioCustomButton {
   display: none;
 }
