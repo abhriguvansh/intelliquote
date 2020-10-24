@@ -6,7 +6,7 @@ function LandingPage(){
     return(
         <div>
         <Navbar />
-          <div class='container'>
+          <div className='container'>
               <label className='email'>
                 <p>Email</p>
               </label>

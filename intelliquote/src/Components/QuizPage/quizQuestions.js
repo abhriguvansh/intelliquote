@@ -27,23 +27,23 @@ let quizQuestions = [
                 content:'Which Statement Resonates With You The Most'
             },
             { 
-                content:'1. I Am the life of the party'
+                content:'I. I Am the life of the party'
             },
-            {content: '2. I am interested in people'},
-            {content: '3. I am always prepared'
+            {content: 'II. I am interested in people'},
+            {content: 'III. I am always prepared'
             }],
         answer: [
             {
                 type: 'Extroversion',
-                content: '1'
+                content: 'l'
             },
             {
                 type: 'Agreeableness',
-                content: '2'
+                content: 'll'
             },
             {
                 type: 'Conscientiousness',
-                content: '3'       
+                content: 'lll'       
             }
         ]
     },
@@ -53,23 +53,79 @@ let quizQuestions = [
                 content:'Which Statement Resonates With You The Most'
             },
             { 
-                content:'1. I am relaxed most of the time'
+                content:'I. I am relaxed most of the time'
             },
-            {content: '2. I Have a vivid imagination'},
-            {content: '3. I am always prepared'
+            {content: 'II. I Have a vivid imagination'},
+            {content: 'III. I am always prepared'
             }],
         answer: [
             {
                 type: 'Neuroticism',
-                content: '1'
+                content: 'l'
             },
             {
                 type: 'Openness',
-                content: '2'
+                content: 'll'
             },
             {
                 type: 'Conscientiousness',
-                content: '3'       
+                content: 'lll'       
+            }
+        ]
+    },
+    {
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+                content:'I. I am relaxed most of the time'
+            },
+            {
+                content: 'II. I am interested in people'},
+            {
+                content:'III. I Am the life of the party'
+            }],
+        answer: [
+            {
+                type: 'Neuroticism',
+                content: 'l'
+            },
+            {
+                type: 'Agreeableness',
+                content: 'll'
+            },
+            {
+                type: 'Extroversion',
+                content: 'lll'       
+            }
+        ]
+    },
+    {
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+            content: 'I. I Have a vivid imagination'
+            },
+            {
+                content: 'II. I am interested in people'},
+            {
+                content:'III. I Am the life of the party'
+            }],
+        answer: [
+            {
+                type: 'Openness',
+                content: 'l'
+            },
+            {
+                type: 'Agreeableness',
+                content: 'll'
+            },
+            {
+                type: 'Extroversion',
+                content: 'lll'       
             }
         ]
     },

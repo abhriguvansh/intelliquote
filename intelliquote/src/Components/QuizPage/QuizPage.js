@@ -113,16 +113,20 @@ renderQuiz() {
 //render result component
 renderResult() {
   return (
+    <div data-testid  = 'result-div'>
     <Results quizResult={this.state.result} />
+    </div>
   );
 }
 
 //if result is empty render the quiz, otherwise render result
 render() {
   return(
-        <div>
+        <div data-testid = 'quiz-div'>
         <Navbar />
-          {this.state.result ? this.renderResult() : this.renderQuiz()}
+        <h1>{this.state.result}</h1>
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+          
         </div>
     )}
     

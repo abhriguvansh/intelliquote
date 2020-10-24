@@ -3,14 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const root = document.getElementById('root')
-function renderToDOM() {
-    if (root !== null) {
-        ReactDOM.render(<App />, root)
-    }
-}
-renderToDOM();
-export {renderToDOM};
+ReactDOM.render(<App />, document.getElementById('root'))
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
