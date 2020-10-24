@@ -10,7 +10,7 @@ function Navbar(){
         <div>
           <nav className = 'navbar'>
           <i id = 'logo'
-          class="fas fa-quote-right"></i>
+          className ="fas fa-quote-right"></i>
           <div className = 'button-list'>
           <ul>
             <li className = 'nav-element'> 
