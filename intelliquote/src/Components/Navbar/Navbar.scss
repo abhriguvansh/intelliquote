@@ -1,21 +1,25 @@
+$primary-color: #001b2e;
+$secondary-color: #adb6c4;
+$tertiary-color: #294c60;
+
 .nav-element {
   list-style-type: none;
   float: right;
   color: black;
   text-align: center;
   padding: 14px 16px;
-  border: 2px solid #294c60;
+  border: 2px solid $tertiary-color;
   border-radius: 20px;
   .nav-button {
     text-decoration: none;
-    color: #001b2e;
+    color: $primary-color;
     outline: none;
   }
   margin: 20px;
 }
 
 .navbar {
-  background: #adb6c4;
+  background: $secondary-color;
   overflow: hidden;
   border-bottom: 2px solid #294c60;
 }
