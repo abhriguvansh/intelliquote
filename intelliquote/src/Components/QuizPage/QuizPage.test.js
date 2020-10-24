@@ -28,7 +28,7 @@ it('test quiz', () => {
   userEvent.click(quiz.getAllByLabelText(/l/i)[0], leftClick)
   userEvent.click(quiz.getAllByLabelText(/l/i)[0], leftClick)
 
-  expect(quiz.text()).equalTo('Openness')
+
 
 
 

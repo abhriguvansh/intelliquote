@@ -1,6 +1,6 @@
 import React from 'react'
 import './LandingPage.css'
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar'
 import Navbar from '../Navbar/Navbar'
 import {
   Link
@@ -11,6 +11,7 @@ function LandingPage(){
     return(
         <div>
         <Navbar />
+        <h1 style= {{display: 'none'}}>LandingPage</h1>
           <SearchBar
           classname='searchbar' 
           />

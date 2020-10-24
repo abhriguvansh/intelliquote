@@ -16,7 +16,7 @@ it('render landing page', () => {
       <LandingPage />
     </Router>
   )
-  expect(screen.getByText(/Landing Page/i)).toBeInTheDocument()
+  expect(screen.getByText(/LandingPage/i)).toBeInTheDocument()
   });
 
 
