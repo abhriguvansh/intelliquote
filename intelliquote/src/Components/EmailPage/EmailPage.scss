@@ -1,0 +1,23 @@
+.email {
+  margin: 1rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: center;
+}
+.email-input {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 1rem 0;
+  margin-top: 0px;
+  display: inline-block;
+  border: none;
+  background: rgba($color: #ccc, $alpha: 0.4);
+  border-radius: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.email-div{
+    margin: 0.5em auto 0 auto;
+    text-align: center;
+}
