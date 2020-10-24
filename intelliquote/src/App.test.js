@@ -40,7 +40,7 @@ it('test email button on navbar', () => {
       <App />
     </Router>
   )
-      
+
   const leftClick = { button: 0 }
   userEvent.click(screen.getByText(/Email/i), leftClick)
 
@@ -48,4 +48,7 @@ it('test email button on navbar', () => {
   expect(screen.getByText(/Email Page/i)).toBeInTheDocument()
 })
 
+describe('quiz results', () => {
+  test('open')
+})
 

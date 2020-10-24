@@ -1,8 +1,11 @@
+//displays a single answer option, we will iterate to display multiple answers for one question in quiz.js
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function AnswerOption(props) {
   return (
+    // create radio input and set text to answerContent from prop
     <li className="answerOption">
       <input
         type="radio"

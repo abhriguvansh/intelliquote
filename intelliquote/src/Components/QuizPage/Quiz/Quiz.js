@@ -1,3 +1,5 @@
+//creates a quiz, QuizPage.js renders this Quiz component
+
 import React from 'react'
 import './Quiz.css'
 import Question from '../Question/Question'
@@ -8,6 +10,17 @@ import AnswerOption from '../AnswerOption/AnswerOption'
 
 
 function Quiz(props) {
+  
+  //render questions 
+  function renderQuestions(key){
+    return(
+      <Question
+        content= {key.content}
+        />
+    )
+  }
+
+  //render possible answers
   function renderAnswerOptions(key) {
     return (
       <AnswerOption
@@ -20,12 +33,13 @@ function Quiz(props) {
       />
     );
   }
-
+//iterate through questions and answers in quizQuestions.js and display the questions and answers
   return (
       <div key={props.questionId}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
-        <Question content={props.question} />
-        <ul className="answerOptions">
+      <ul className="questionOptions">
+          {props.questions.map(renderQuestions)}
+        </ul>        <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
         </ul>
       </div>

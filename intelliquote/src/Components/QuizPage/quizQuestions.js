@@ -1,16 +1,17 @@
 /*
 This file stores the questions that the quiz displays
 Each element in the questions array holds a question and an answer
+There are multiple questions, the user will choose which resonates with them the most
 The answer is made up of an array of possible choices
 Each element in the answer array keeps track of the personality type associated with the choice:
 
-O = Openness
-C = Conscientiousness
-E = Extroversion 
-A = Agreeableness
-N = Neuroticism 
+ Openness
+ Conscientiousness
+ Extroversion 
+ Agreeableness
+ Neuroticism 
 
-If they choose an answer that does not signal an alignment towards one of the traits, the type is "a little bit of everything" since there is no strong affiliation
+By choosing one of the 3 statements we are keeping track of what is their most prevalent personality
 
 
 
@@ -21,90 +22,58 @@ If they choose an answer that does not signal an alignment towards one of the tr
 let quizQuestions = [
 
     {
-        question: 'I Am the life of the party.',
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+                content:'1. I Am the life of the party'
+            },
+            {content: '2. I am interested in people'},
+            {content: '3. I am always prepared'
+            }],
         answer: [
             {
-                type: 'E',
-                content: 'Agree'
+                type: 'Extroversion',
+                content: '1'
             },
             {
-                type: 'A little bit of everything',
-                content: 'Neutral'
+                type: 'Agreeableness',
+                content: '2'
             },
             {
-                type: 'A mix of everything',
-                content: 'Disagree'       
+                type: 'Conscientiousness',
+                content: '3'       
             }
         ]
     },
     {
-        question: 'I am interested in people.',
+        question: [
+            { 
+                content:'Which Statement Resonates With You The Most'
+            },
+            { 
+                content:'1. I am relaxed most of the time'
+            },
+            {content: '2. I Have a vivid imagination'},
+            {content: '3. I am always prepared'
+            }],
         answer: [
             {
-                type: 'A',
-                content: 'Agree'
+                type: 'Neuroticism',
+                content: '1'
             },
             {
-                type: 'A little bit of everything',
-                content: 'Neutral'
+                type: 'Openness',
+                content: '2'
             },
             {
-                type: 'A mix of everything',
-                content: 'Disagree'       
+                type: 'Conscientiousness',
+                content: '3'       
             }
         ]
     },
-    {
-        question: 'I am always prepared',
-        answer: [
-            {
-                type: 'C',
-                content: 'Agree'
-            },
-            {
-                type: 'A little bit of everything',
-                content: 'Neutral'
-            },
-            {
-                type: 'A mix of everything',
-                content: 'Disagree'       
-            }
-        ]
-    },
-    {
-        question: 'I am relaxed most of the time',
-        answer: [
-            {
-                type: 'N',
-                content: 'Agree'
-            },
-            {
-                type: 'A little bit of everything',
-                content: 'Neutral'
-            },
-            {
-                type: 'A mix of everything',
-                content: 'Disagree'       
-            }
-        ]
-    },
-    {
-        question: 'I Have a vivid imagination',
-        answer: [
-            {
-                type: 'O',
-                content: 'Agree'
-            },
-            {
-                type: 'A little bit of everything',
-                content: 'Neutral'
-            },
-            {
-                type: 'A mix of everything',
-                content: 'Disagree'       
-            }
-        ]
-    },
+   
 ]
 
 export default quizQuestions;
