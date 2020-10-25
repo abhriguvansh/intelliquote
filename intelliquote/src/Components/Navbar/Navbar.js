@@ -28,6 +28,11 @@ function Navbar(){
                 <h2>Quiz</h2>
             </Link>
              </li>
+             <li className = 'nav-element' >
+            <Link className = 'nav-button' to = '/suggest'>  
+                <h2>Suggest</h2>
+            </Link>
+             </li>
           </ul>
           </div>
            

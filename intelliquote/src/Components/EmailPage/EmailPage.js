@@ -2,7 +2,7 @@ import React from 'react'
 import './EmailPage.css'
 import Navbar from '../Navbar/Navbar'
 
-function LandingPage(){
+function EmailPage(){
     return(
         <div>
         <Navbar />
@@ -31,4 +31,4 @@ function LandingPage(){
 
 }
 
-export default LandingPage
+export default EmailPage

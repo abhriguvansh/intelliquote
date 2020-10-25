@@ -1,0 +1,13 @@
+$primary-color: #001b2e;
+$secondary-color: #adb6c4;
+$tertiary-color: #294c60;
+
+.quote-div {
+  border: $primary-color 2px solid;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  background: $secondary-color;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
