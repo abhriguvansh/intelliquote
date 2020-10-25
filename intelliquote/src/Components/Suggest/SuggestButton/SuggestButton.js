@@ -1,10 +1,12 @@
 import React from 'react'
 import './SuggestButton.css'
+import Quote from '../Quote/Quote'
 
 function SuggestButton() {
 
     function submitClick(){
         alert('quote submitted')
+    
     }
     return(
        <div className = 'form-div'>
