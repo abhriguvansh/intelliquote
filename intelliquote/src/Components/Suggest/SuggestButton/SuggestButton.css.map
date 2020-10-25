@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,UAAU,EAAE,IAAI;CACjB;;AACD,AAAA,aAAa,CAAC;EACZ,UAAU,EARK,OAAO;EAStB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;CAKd;;AARD,AAKE,aALW,CAKX,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "SuggestButton.scss"
+    ],
+    "names": [],
+    "file": "SuggestButton.css"
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import './Suggest.css'
 import Navbar from '../Navbar/Navbar'
 import Quote from './Quote/Quote'
-
+import SuggestButton from './SuggestButton/SuggestButton'
 
 
 function Suggest(){
@@ -15,7 +15,8 @@ function Suggest(){
     return(
         <div>
         <Navbar />
-          <h2>Suggest</h2>
+        <SuggestButton />
+          <h2 style = {{display: 'none'}}>Suggest</h2>
           <div className="quotes-display">
           <Quote quote =  'Experience is simply the name we give our mistakes.' author = 'Oscar Wilde' />
           <Quote quote = 'It always seems impossible until its done.' author = 'Nelson Mandela' />

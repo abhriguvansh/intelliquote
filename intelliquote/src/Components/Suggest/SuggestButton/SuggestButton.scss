@@ -1,0 +1,18 @@
+$primary-color: #001b2e;
+$secondary-color: #adb6c4;
+$tertiary-color: #294c60;
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.suggest-form {
+  background: $tertiary-color;
+  display: inline-block;
+  padding: 10px;
+    
+  label {
+    color: white;
+  }
+}
