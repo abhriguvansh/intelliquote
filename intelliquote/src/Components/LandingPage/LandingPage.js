@@ -1,6 +1,6 @@
 import React from 'react'
 import './LandingPage.css'
-import SearchBar from './SearchBar';
+import SearchBar from './SearchBar/SearchBar'
 import Navbar from '../Navbar/Navbar'
 import {
   Link
