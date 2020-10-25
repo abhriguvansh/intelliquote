@@ -19,3 +19,12 @@ $tertiary-color: #294c60;
   border: 2px solid $tertiary-color;
   border-radius: 10px;
 }
+
+.quotes-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
