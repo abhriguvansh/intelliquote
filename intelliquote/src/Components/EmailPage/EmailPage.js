@@ -6,7 +6,26 @@ function LandingPage(){
     return(
         <div>
         <Navbar />
-          <h2>Email Page</h2>
+          <div class='container'>
+              <label className='email'>
+                <p>Email</p>
+              </label>
+              <br />
+              <div className='email-div'>
+                <input
+                  type='text'
+                  placeholder='Enter Email'
+                  className='email-input'
+                  required
+                />
+              </div>
+              <div className='submit-div'>
+                {' '}
+                <button type='submit' className='submit'>
+                  submit
+                </button>
+              </div>
+            </div>
         </div>
     )
 

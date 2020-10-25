@@ -1,1 +1,74 @@
-/* No CSS *//*# sourceMappingURL=EmailPage.css.map */
+.container {
+  padding: 16px 0;
+  text-align: center;
+  width: 450px;
+  margin: 6rem auto;
+  margin-top: 10rem;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background: white;
+  border-radius: 4em;
+  z-index: 0;
+  -webkit-box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
+          box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
+}
+
+.email {
+  margin: 2rem;
+  margin-bottom: 4px;
+  display: block;
+  text-align: center;
+}
+
+.email-input {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 1rem 0;
+  margin-top: 0px;
+  display: inline-block;
+  border: none;
+  background: rgba(204, 204, 204, 0.4);
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.email-div {
+  margin: 0.5em auto 0 auto;
+  text-align: center;
+}
+
+.submit {
+  background-color: #294c60;
+  display: inline-block;
+  color: white;
+  margin-top: 3em;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  margin: 0.5em auto 0 auto;
+}
+
+.submit-div {
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0.5em auto 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.submit-div:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=EmailPage.css.map */
