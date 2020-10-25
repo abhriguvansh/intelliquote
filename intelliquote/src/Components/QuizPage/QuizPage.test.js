@@ -13,7 +13,7 @@ it('renders without crashing', () => {
   shallow(<QuizPage />);
 });
 
-it('test quiz button on navbar', () => {
+it('test quiz', () => {
   const history = createMemoryHistory()
   render(
     <Router history = {history}>
@@ -22,18 +22,12 @@ it('test quiz button on navbar', () => {
   )
 
   const leftClick = { button: 0 }
-  userEvent.click(screen.getByText(/lll/i))
+  userEvent.click(screen.findByText(/lll/i), leftClick)
 
 
   expect(screen.findByText('Question 2'))
-  userEvent.click(screen.getByText(/lll/i))
 
 
-  expect(screen.findByText('Question 2'))
-  userEvent.click(screen.getByText(/lll/i))
-
-
-  expect(screen.findByText('Question 2'))
 });
 
 
