@@ -59,5 +59,5 @@ it('test email button on navbar', () => {
   userEvent.click(screen.getByText(/Email/i), leftClick)
 
   // check that the content changed to the new page
-  expect(screen.getByText(/Email Page/i)).toBeInTheDocument()
+  expect(screen.getAllByText(/Email/i)[0]).toBeInTheDocument()
 })

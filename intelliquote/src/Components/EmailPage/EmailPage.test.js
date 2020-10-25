@@ -16,7 +16,7 @@ it('render email page', () => {
       <EmailPage />
     </Router>   
   )
-  expect(screen.getByText(/Email Page/i)).toBeInTheDocument()
+  expect(screen.getAllByText(/Email/i)[0]).toBeInTheDocument()
   });
 
 
