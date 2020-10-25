@@ -8,9 +8,10 @@ public class Quote {
 
     private @Id @GeneratedValue Integer id;
     private String author;
+    @Column(length = 1000)
     private String quoteContent;
     private int flags = 0;
-    private boolean approved;
+    private boolean approved = true;
 
     public Quote(){}
 
@@ -48,7 +49,27 @@ public class Quote {
     }
 
     @Override
-    public String toString(){
-        return this.quoteContent + " - " + this.author;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Quote quote = (Quote) o;
+        return author.equals(quote.author) &&
+                quoteContent.equals(quote.quoteContent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author, quoteContent);
+    }
+
+    @Override
+    public String toString() {
+        return "Quote{" +
+                "id=" + id +
+                ", author='" + author + '\'' +
+                ", quoteContent='" + quoteContent + '\'' +
+                ", flags=" + flags +
+                ", approved=" + approved +
+                '}';
     }
 }
