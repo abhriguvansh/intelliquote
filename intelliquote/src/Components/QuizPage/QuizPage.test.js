@@ -15,17 +15,21 @@ it('renders without crashing', () => {
 
 it('test quiz', () => {
   const history = createMemoryHistory()
-  render(
+  const quiz = render(
     <Router history = {history}>
       <QuizPage />
     </Router>
   )
 
   const leftClick = { button: 0 }
-  userEvent.click(screen.findByText(/lll/i), leftClick)
 
+  userEvent.click(quiz.getByLabelText(/lll/i), leftClick)
+  userEvent.click(quiz.getAllByLabelText(/ll/i)[0], leftClick)
+  userEvent.click(quiz.getAllByLabelText(/l/i)[0], leftClick)
+  userEvent.click(quiz.getAllByLabelText(/l/i)[0], leftClick)
 
-  expect(screen.findByText('Question 2'))
+  expect(quiz.text()).equalTo('Openness')
+
 
 
 });
