@@ -1,6 +1,6 @@
 import React from 'react'
 import './SuggestButton.css'
-import Quote from '../Quote/Quote'
+import Quote from '../../Quote/Quote'
 
 function SuggestButton() {
 

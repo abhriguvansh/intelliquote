@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAIA,AAAA,UAAU,CAAC;EACT,MAAM,EALQ,OAAO,CAKE,GAAG,CAAC,KAAK;EAChC,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM;EAClB,UAAU,EARM,OAAO;EASvB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,IAAI;CACjB",
-    "sources": [
-        "Quote.scss"
-    ],
-    "names": [],
-    "file": "Quote.css"
-}
