@@ -42,8 +42,8 @@ it('test quiz button on navbar', () => {
   const leftClick = { button: 0 }
   userEvent.click(screen.getByText(/Home/i), leftClick)
 
-  // check that the content changed to the new page 'I am the lift of the party' is one of the first things the user sees on the quiz page
-  expect(screen.getByText(/Landing Page/i)).toBeInTheDocument()
+
+  expect(screen.getByText(/LandingPage/i)).toBeInTheDocument()
 });
 
 //generate left click action and use email button on the navbar to test it works

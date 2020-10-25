@@ -11,6 +11,7 @@ function LandingPage(){
     return(
         <div>
         <Navbar />
+        <h1 style= {{display: 'none'}}>LandingPage</h1>
           <SearchBar
           classname='searchbar' 
           />
