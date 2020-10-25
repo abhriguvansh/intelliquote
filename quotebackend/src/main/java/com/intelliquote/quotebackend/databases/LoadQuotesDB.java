@@ -1,36 +1,38 @@
 package com.intelliquote.quotebackend.databases;
 
 import com.intelliquote.quotebackend.entities.Quote;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+@Configuration
 public class LoadQuotesDB {
     private List<Quote> quotes = new ArrayList<>();
+    private static final Logger log = LoggerFactory.getLogger(LoadQuotesDB.class);
 
-    public LoadQuotesDB(){}
+    public LoadQuotesDB() {}
 
     @Bean
     CommandLineRunner initDatabase(QuoteDB quoteDB) throws IOException {
-        quotes = readQuotes("quotes.txt");
-
+        this.quotes = LoadQuotesDB.readQuotes("quotes.txt");
         return args -> {
             for (Quote quote : quotes) {
-                quoteDB.save(quote);
+                log.info("Loading " + quoteDB.save(quote));
             }
         };
     }
 
-    ArrayList<Quote> readQuotes(String fileName) throws IOException {
-        URL url = getClass().getResource(fileName);
-        File quotesFile = new File(url.getPath());
+    static ArrayList<Quote> readQuotes(String pathName) throws IOException {
+        File quotesFile = new File("quotebackend/src/main/java/com/intelliquote/quotebackend/databases/quotes.txt");
 
         BufferedReader br = new BufferedReader(new FileReader(quotesFile));
 
