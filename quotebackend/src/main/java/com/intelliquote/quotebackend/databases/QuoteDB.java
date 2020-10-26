@@ -9,4 +9,7 @@ public interface QuoteDB extends JpaRepository<Quote, Integer> {
     @Query("select q from Quote q where lower(q.author) like lower(concat('%', ?1, '%'))"
             + " or q.quoteContent like lower(concat('%', ?1, '%'))")
     List<Quote> search(String searchTerm);
+
+    @Query("select count(q) from Quote q")
+    Integer totalQuotes();
 }

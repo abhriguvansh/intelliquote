@@ -17,7 +17,6 @@ public class QuoteHandler {
             throw new IllegalArgumentException("Must enter search term");
         }
         else {
-            System.out.println(searchTerm);
             return quoteDB.search(searchTerm);
         }
     }
