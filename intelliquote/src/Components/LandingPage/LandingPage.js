@@ -1,8 +1,12 @@
-import React from 'react';
-import './LandingPage.css';
-import SearchBar from './SearchBar/SearchBar';
-import Navbar from '../Navbar/Navbar';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './LandingPage.css'
+import SearchBar from './SearchBar/SearchBar'
+import Navbar from '../Navbar/Navbar'
+import {
+  Link
+
+} from 'react-router-dom'
+
 
 function LandingPage() {
   return (
@@ -14,4 +18,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default LandingPage
