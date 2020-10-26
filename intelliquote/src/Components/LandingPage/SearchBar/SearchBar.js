@@ -11,14 +11,26 @@ const SearchBar = () => {
   };
   const [keyword, setKeyword] = useState('');
   const [quotes, setQuotes] = useState([]);
-  const searchQuotes = async (event) => {
+  const getRandom = async (event) => {
     event.preventDefault();
-    // TODO: Implement environment file to simplify api urls
-    const apiUrl = `http://localhost:8080/api/search?query=${keyword}`;
+    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/getRandom`;
 
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
+      setQuotes(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const searchQuotes = async (event) => {
+    event.preventDefault();
+    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${keyword}`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      console.log(data);
       setQuotes(data);
     } catch (err) {
       console.log(err);
@@ -38,10 +50,12 @@ const SearchBar = () => {
         <button className={'button'} type={'submit'}>
           Search
         </button>
+        <button className={'button'} onClick={getRandom}>
+          Random
+        </button>
       </form>
       <Quote quotes={quotes} />
     </>
   );
 };
-
 export default SearchBar;
