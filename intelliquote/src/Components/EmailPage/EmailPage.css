@@ -56,16 +56,23 @@
   margin: 0.5em auto 0 auto;
 }
 
-.submit-div {
+.button-div {
   display: inline-block;
   text-align: center;
   border-radius: 15px;
-  margin: 0.5em auto 0 auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.submit-div:hover {
+.button-div button {
+  display: block;
+}
+
+.button-div button:hover {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transform: scale(1.1);

@@ -2,6 +2,9 @@ import React from 'react';
 import './Quote.css';
 
 export default function Quote({ quotes }) {
+  if (!quotes) {
+    return quotes;
+  }
   return (
     <div className={'quotes-container'}>
       {quotes

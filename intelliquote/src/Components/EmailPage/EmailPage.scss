@@ -55,16 +55,19 @@ $primary-color: #001b2e;
   margin: 0.5em auto 0 auto;
 }
 
-.submit-div {
+.button-div {
   display: inline-block;
   text-align: center;
   border-radius: 15px;
-  margin: 0.5em auto 0 auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  &:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.1);
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  button {
+    display: block;
+    &:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.1);
+    }
   }
 }
 

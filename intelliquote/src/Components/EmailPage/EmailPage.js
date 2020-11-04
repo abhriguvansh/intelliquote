@@ -33,10 +33,13 @@ function EmailPage() {
             Monthly <input type='radio' name='interval' id='monthly' />
           </label>
         </div>
-        <div className='submit-div'>
+        <div className='button-div'>
           {' '}
           <button type='submit' className='submit'>
-            submit
+            Subscribe
+          </button>
+          <button type='submit' className='submit'>
+            Unsubscribe
           </button>
         </div>
       </div>

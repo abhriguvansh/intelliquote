@@ -9,6 +9,8 @@ it('renders without crashing', () => {
 
 //test that props are passed properly
 it('test props of Quote', () => {
-  const result = shallow(<Quote quoteContent='QUOTE' author='AUTHOR' />);
-  expect(result.text()).toEqual('QUOTE-AUTHOR');
+  const result = shallow(
+    <Quote quotes={[{ quoteContent: 'QUOTE', author: 'AUTHOR' }]} />
+  );
+  expect(result.text()).toEqual('QUOTEAUTHOR');
 });
