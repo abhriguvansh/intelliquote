@@ -39,7 +39,9 @@ const SearchBar = () => {
   return (
     <>
       <form className='searchbar-div' onSubmit={searchQuotes}>
+        <label htmlFor='search'>Search For A Quote</label>
         <input
+          id='search'
           className='search-bar'
           style={BarStyling}
           key='random1'
