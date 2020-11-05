@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["Quote.scss"],"names":[],"mappings":"AAIA;EACE;EACA;EACA;EACA;EACA,YARgB;EAShB;EACA;EACA","file":"Quote.css"}
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,UAAU,CAAC;EACT,MAAM,EALQ,OAAO,CAKE,GAAG,CAAC,KAAK;EAChC,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM;EAClB,UAAU,EARM,OAAO;EASvB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "Quote.scss"
+    ],
+    "names": [],
+    "file": "Quote.css"
+}
