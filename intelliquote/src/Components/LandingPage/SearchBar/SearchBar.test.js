@@ -16,3 +16,4 @@ it('searchbar accepts input', () => {
   const wrapper = mount(<SearchBar />);
   expect(wrapper.find('input'));
 });
+

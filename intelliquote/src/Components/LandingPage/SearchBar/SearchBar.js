@@ -56,7 +56,7 @@ const SearchBar = () => {
           Random
         </button>
       </form>
-      <Quote quotes={quotes} />
+      <Quote data-testid = 'quotes' quotes={quotes} />
     </>
   );
 };
