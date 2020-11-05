@@ -30,7 +30,6 @@ const SearchBar = () => {
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      console.log(data);
       setQuotes(data);
     } catch (err) {
       console.log(err);
@@ -48,16 +47,16 @@ const SearchBar = () => {
           value={keyword}
           placeholder={'search quote'}
           onChange={(e) => setKeyword(e.target.value)}
-          data-testid = 'searchbar'
+          data-testid='searchbar'
         />
-        <button className={'button'} type={'submit'} data-testid = 'search'>
+        <button className={'button'} type={'submit'} data-testid='search'>
           Search
         </button>
         <button className={'button'} onClick={getRandom}>
           Random
         </button>
       </form>
-      <Quote data-testid = 'quotes' quotes={quotes} />
+      <Quote data-testid='quotes' quotes={quotes} />
     </>
   );
 };
