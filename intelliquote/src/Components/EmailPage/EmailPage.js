@@ -4,11 +4,34 @@ import './EmailPage.css';
 import Navbar from '../Navbar/Navbar';
 
 class EmailPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      interval: '',
+      personality: '',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubscribe(event){
+    
+  }
   render() {
     return (
       <div>
         <Navbar />
-        <div className='container'>
+        <form className='container'>
           <label className='email'>
             <p>Email</p>
           </label>
@@ -16,9 +39,11 @@ class EmailPage extends React.Component {
           <div className='email-div'>
             <input
               type='email'
+              name='email'
               placeholder='Enter Email'
               className='email-input'
               required
+              onChange={this.handleChange}
             />
           </div>
           <div className='interval-div'>
@@ -61,14 +86,10 @@ class EmailPage extends React.Component {
           </div>
           <div className='button-div'>
             {' '}
-            <button type='submit' className='submit'>
-              Subscribe
-            </button>
-            <button type='submit' className='submit'>
-              Unsubscribe
-            </button>
+            <button className='submit' onClick = {this.handleSubscribe}>Subscribe</button>
+            <button className='submit'>Unsubscribe</button>
           </div>
-        </div>
+        </form>
       </div>
     );
   }
