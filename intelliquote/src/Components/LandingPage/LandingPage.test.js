@@ -36,3 +36,15 @@ it('searchbar returns quotes', () => {
   fireEvent.click(screen.getByText('Search'));
   expect(screen.getByTestId('quote-container')).toBeInDocument;
 });
+
+it('random button displays quote', () => {
+  const history = createMemoryHistory();
+  render(
+    <Router history={history}>
+      <LandingPage />
+    </Router>
+  );
+
+  fireEvent.click(screen.getByText('Random'));
+  expect(screen.getByTestId('quote-container')).toBeInDocument;
+});

@@ -38,7 +38,7 @@ class EmailPage extends React.Component {
     axios
       .post('http://localhost:8080/', data)
       .then((res) => console.log(res.data));
-    window.location = '/';
+    alert('subscribe');
   }
   render() {
     return (
@@ -150,7 +150,11 @@ class EmailPage extends React.Component {
           </div>
           <div className='button-div'>
             {' '}
-            <button className='submit' onClick={this.handleSubscribe}>
+            <button
+              className='submit'
+              data-testid='sub'
+              onClick={this.handleSubscribe}
+            >
               Subscribe
             </button>
             <button className='submit'>Unsubscribe</button>
