@@ -6,7 +6,7 @@
   margin-top: 10rem;
   padding-top: 1em;
   padding-bottom: 2em;
-  background: white;
+  background: #adb6c4;
   border-radius: 4em;
   z-index: 0;
   -webkit-box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
@@ -27,7 +27,7 @@
   margin-top: 0px;
   display: inline-block;
   border: none;
-  background: rgba(204, 204, 204, 0.4);
+  background: white;
   border-radius: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -56,19 +56,50 @@
   margin: 0.5em auto 0 auto;
 }
 
-.submit-div {
+.button-div {
   display: inline-block;
   text-align: center;
   border-radius: 15px;
-  margin: 0.5em auto 0 auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.submit-div:hover {
+.button-div button {
+  display: block;
+}
+
+.button-div button:hover {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.interval-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 1rem;
+}
+
+.interval-div label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100px;
+}
+
+.interval-div label input {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=EmailPage.css.map */
