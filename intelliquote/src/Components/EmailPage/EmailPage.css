@@ -6,7 +6,7 @@
   margin-top: 10rem;
   padding-top: 1em;
   padding-bottom: 2em;
-  background: #adb6c4;
+  background: #294c60;
   border-radius: 4em;
   z-index: 0;
   -webkit-box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
@@ -40,7 +40,7 @@
 }
 
 .submit {
-  background-color: #294c60;
+  background-color: #001b2e;
   display: inline-block;
   color: white;
   margin-top: 3em;
