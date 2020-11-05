@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import './EmailPage.css';
 import Navbar from '../Navbar/Navbar';
-
+import axios from 'axios';
 class EmailPage extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +13,7 @@ class EmailPage extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubscribe = this.handleSubscribe.bind(this);
   }
 
   handleChange(event) {
@@ -24,8 +25,18 @@ class EmailPage extends React.Component {
     });
   }
 
-  handleSubscribe(event){
-    
+  handleSubscribe(event) {
+    event.preventDefault();
+    console.log(
+      `email: ${this.state.email} int: ${this.state.interval} p: ${this.state.personality}`
+    );
+    const data = {
+      email: this.state.email,
+      interval: this.state.interval,
+      personality: this.state.personality,
+    };
+    axios.post('', data).then((res) => console.log(res.data));
+    window.location = '/';
   }
   render() {
     return (
@@ -48,45 +59,98 @@ class EmailPage extends React.Component {
           </div>
           <div className='interval-div'>
             <label htmlFor='daily'>
-              Daily <input type='radio' name='interval' id='daily' />
+              Daily{' '}
+              <input
+                type='radio'
+                name='interval'
+                id='daily'
+                onChange={this.handleChange}
+                value='daily'
+              />
             </label>
 
             <label htmlFor='weekly'>
               Weekly
-              <input type='radio' name='interval' id='weekly' />
+              <input
+                type='radio'
+                name='interval'
+                id='weekly'
+                onChange={this.handleChange}
+                value='weekly'
+              />
             </label>
 
             <label htmlFor='monthly'>
-              Monthly <input type='radio' name='interval' id='monthly' />
+              Monthly{' '}
+              <input
+                type='radio'
+                name='interval'
+                id='monthly'
+                onChange={this.handleChange}
+                value='monthly'
+              />
             </label>
           </div>
 
           <div className='personality-div'>
             <label htmlFor='openness'>
-              openness <input type='radio' name='personality' id='openness' />
+              openness{' '}
+              <input
+                type='radio'
+                name='personality'
+                id='openness'
+                onChange={this.handleChange}
+                value='openness'
+              />
             </label>
 
             <label htmlFor='conscientiousness'>
               conscientiousness
-              <input type='radio' name='personality' id='conscientiousness' />
+              <input
+                type='radio'
+                name='personality'
+                id='conscientiousness'
+                onChange={this.handleChange}
+                value='conscientiousness'
+              />
             </label>
 
             <label htmlFor='extroversion'>
               extroversion{' '}
-              <input type='radio' name='personality' id='extroversion' />
+              <input
+                type='radio'
+                name='personality'
+                id='extroversion'
+                onChange={this.handleChange}
+                value='extroversion'
+              />
             </label>
             <label htmlFor='agreeableness'>
               agreeableness{' '}
-              <input type='radio' name='personality' id='agreeableness' />
+              <input
+                type='radio'
+                name='personality'
+                id='agreeableness'
+                onChange={this.handleChange}
+                value='agreeableness'
+              />
             </label>
             <label htmlFor='neuroticism'>
               neuroticism{' '}
-              <input type='radio' name='personality' id='neuroticism' />
+              <input
+                type='radio'
+                name='personality'
+                id='neuroticism'
+                onChange={this.handleChange}
+                value='neuroticisim'
+              />
             </label>
           </div>
           <div className='button-div'>
             {' '}
-            <button className='submit' onClick = {this.handleSubscribe}>Subscribe</button>
+            <button className='submit' onClick={this.handleSubscribe}>
+              Subscribe
+            </button>
             <button className='submit'>Unsubscribe</button>
           </div>
         </form>
