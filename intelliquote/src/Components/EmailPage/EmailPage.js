@@ -35,7 +35,9 @@ class EmailPage extends React.Component {
       interval: this.state.interval,
       personality: this.state.personality,
     };
-    axios.post('', data).then((res) => console.log(res.data));
+    axios
+      .post('http://localhost:8080/', data)
+      .then((res) => console.log(res.data));
     window.location = '/';
   }
   render() {
