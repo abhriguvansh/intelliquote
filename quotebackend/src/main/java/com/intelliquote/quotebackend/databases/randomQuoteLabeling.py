@@ -9,7 +9,7 @@ for line in file:
     rnd = random.randint(0,4)
     write_line = line[0:len(line)-2] + " | " + d[rnd]
     c[d[rnd]] += 1
-    ret = output.write(str(write_line))
+    ret = output.write(str(write_line) + '\n')
     print(ret)
 
 output.close
