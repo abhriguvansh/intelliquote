@@ -2,18 +2,18 @@ $tertiary-color: #294c60;
 $secondary-color: #adb6c4;
 $primary-color: #001b2e;
 .container {
-    padding: 16px 0;
-    text-align: center;
-    width: 450px;
+  padding: 16px 0;
+  text-align: center;
+  width: 450px;
   margin: 6rem auto;
   margin-top: 10rem;
   padding-top: 1em;
   padding-bottom: 2em;
-  background: white;
+  background: $tertiary-color;
   border-radius: 4em;
   z-index: 0;
   box-shadow: 0 0 25px rgba($color: $tertiary-color, $alpha: 0.2);
-  }
+}
 
 .email {
   margin: 2rem;
@@ -28,42 +28,59 @@ $primary-color: #001b2e;
   margin-top: 0px;
   display: inline-block;
   border: none;
-  background: rgba($color: #ccc, $alpha: 0.4);
+  background: white;
   border-radius: 15px;
   box-sizing: border-box;
   outline: none;
 }
 
-.email-div{
-    margin: 0.5em auto 0 auto;
-    text-align: center;
+.email-div {
+  margin: 0.5em auto 0 auto;
+  text-align: center;
 }
 
 .submit {
-    background-color: $tertiary-color;
-    display: inline-block;
-    color: white;
-    margin-top: 3em;
-    padding: 1em;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-    transition: 0.8s ease;
-    border-radius: 25px;
-    outline: none;
-    text-align: center;
-    margin: 0.5em auto 0 auto;
-  }
-  
-  .submit-div {
-    display: inline-block;
-    text-align: center;
-    border-radius: 15px;
-    margin: 0.5em auto 0 auto;
-    margin-top: 1em;
-    margin-bottom: 2em;
+  background-color: $primary-color;
+  display: inline-block;
+  color: white;
+  margin-top: 3em;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  transition: 0.8s ease;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  margin: 0.5em auto 0 auto;
+}
+
+.button-div {
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  button {
+    display: block;
     &:hover {
-        transition-duration: 0.3s;
-        transform: scale(1.1);
-      }
+      transition-duration: 0.3s;
+      transform: scale(1.1);
+    }
   }
+}
+
+.interval-div {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    input {
+      margin-top: 1rem;
+    }
+  }
+}
