@@ -72,4 +72,7 @@ public class Quote {
                 ", approved=" + approved +
                 '}';
     }
+    public String formattedString() {
+        return quoteContent + " - " + author;
+    }
 }
