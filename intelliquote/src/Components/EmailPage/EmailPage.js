@@ -25,7 +25,7 @@ class EmailPage extends React.Component {
     });
   }
 
-  handleSubscribe(event) {
+  async handleSubscribe(event) {
     event.preventDefault();
     console.log(
       `email: ${this.state.email} int: ${this.state.interval} p: ${this.state.personality}`
