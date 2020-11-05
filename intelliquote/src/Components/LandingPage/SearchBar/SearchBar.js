@@ -48,8 +48,9 @@ const SearchBar = () => {
           value={keyword}
           placeholder={'search quote'}
           onChange={(e) => setKeyword(e.target.value)}
+          data-testid = 'searchbar'
         />
-        <button className={'button'} type={'submit'}>
+        <button className={'button'} type={'submit'} data-testid = 'search'>
           Search
         </button>
         <button className={'button'} onClick={getRandom}>
