@@ -71,6 +71,15 @@ $primary-color: #001b2e;
   }
 }
 
+.personality-div {
+  display: flex;
+  flex-direction: column;
+  label {
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+
 .interval-div {
   display: flex;
   justify-content: space-around;

@@ -79,6 +79,21 @@
           transform: scale(1.1);
 }
 
+.personality-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.personality-div label {
+  position: relative;
+  margin-top: 1rem;
+}
+
 .interval-div {
   display: -webkit-box;
   display: -ms-flexbox;
