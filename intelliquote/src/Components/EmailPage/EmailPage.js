@@ -38,7 +38,6 @@ class EmailPage extends React.Component {
     axios
       .post('http://localhost:8080/api/emailRequest', data)
       .then((res) => console.log(res.data));
-    window.location = '/';
   }
   render() {
     return (
