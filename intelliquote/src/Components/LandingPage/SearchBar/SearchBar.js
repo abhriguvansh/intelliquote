@@ -19,9 +19,7 @@ const SearchBar = () => {
       const response = await fetch(apiUrl);
       const data = await response.json();
       setQuotes(data);
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
   };
   const searchQuotes = async (event) => {
     event.preventDefault();
