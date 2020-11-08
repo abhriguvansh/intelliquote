@@ -79,4 +79,7 @@ public class Quote {
                 ", personality=" + personalities +
                 '}';
     }
+    public String formattedString() {
+        return quoteContent + " - " + author;
+    }
 }

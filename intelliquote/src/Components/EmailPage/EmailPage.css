@@ -6,11 +6,10 @@
   margin-top: 10rem;
   padding-top: 1em;
   padding-bottom: 2em;
-  background: white;
+  background: #294c60;
   border-radius: 4em;
   z-index: 0;
-  -webkit-box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
-          box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
+  box-shadow: 0 0 25px rgba(41, 76, 96, 0.2);
 }
 
 .email {
@@ -27,10 +26,9 @@
   margin-top: 0px;
   display: inline-block;
   border: none;
-  background: rgba(204, 204, 204, 0.4);
+  background: white;
   border-radius: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
 }
 
@@ -40,7 +38,7 @@
 }
 
 .submit {
-  background-color: #294c60;
+  background-color: #001b2e;
   display: inline-block;
   color: white;
   margin-top: 3em;
@@ -48,7 +46,6 @@
   border: none;
   cursor: pointer;
   width: 100px;
-  -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
   border-radius: 25px;
   outline: none;
@@ -56,19 +53,43 @@
   margin: 0.5em auto 0 auto;
 }
 
-.submit-div {
+.button-div {
   display: inline-block;
   text-align: center;
   border-radius: 15px;
-  margin: 0.5em auto 0 auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.button-div button {
+  display: block;
+}
+.button-div button:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.1);
 }
 
-.submit-div:hover {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.personality-div {
+  display: flex;
+  flex-direction: column;
 }
+.personality-div label {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.interval-div {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+.interval-div label {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+.interval-div label input {
+  margin-top: 1rem;
+}
+
 /*# sourceMappingURL=EmailPage.css.map */

@@ -32,10 +32,6 @@ public class QuoteController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/getRandom")
     public List<Quote> getRandom() {
-        Random rand = new Random();
-        List<Quote> q = new ArrayList<>();
-        q.add(quoteDB.findById(rand.nextInt(quoteDB.totalQuotes())+1)
-                .orElseThrow(() -> new RuntimeException("An error has occurred")));
-        return q;
+        return quoteHandler.getRandom();
     }
 }

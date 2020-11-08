@@ -33,4 +33,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-/*# sourceMappingURL=SearchBar.css.map */
+
+label {
+  color: white;
+}
