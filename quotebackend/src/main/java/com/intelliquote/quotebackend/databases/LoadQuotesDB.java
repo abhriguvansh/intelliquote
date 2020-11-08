@@ -41,22 +41,29 @@ public class LoadQuotesDB {
         while ((quoteWithAuthor = br.readLine()) != null) {
             int separator = quoteWithAuthor.lastIndexOf(" - ");
 
-            if (separator >= 1) {
-                String quote = quoteWithAuthor.substring(0, separator)
-                        .trim();
-                String author = quoteWithAuthor.substring(separator + 2)
-                        .trim();
+            String quote, author, personality;
 
-                Quote quote1 = new Quote(author, quote);
-                list.add(quote1);
+            if (separator >= 1) {
+                quote = quoteWithAuthor.substring(0, separator)
+                        .trim();
+                author = quoteWithAuthor.substring(separator + 2)
+                        .trim();
             }
             else {
-                String quote = quoteWithAuthor.trim();
-                String author = "Unknown";
-
-                Quote quote1 = new Quote(author, quote);
-                list.add(quote1);
+                quote = quoteWithAuthor.trim();
+                author = "Unknown";
             }
+            if(!author.equals("Unknown")){
+                author = author.split("\\|")[0].trim();
+                char p = quoteWithAuthor.charAt(quoteWithAuthor.length()-1);
+                personality = Character.toString(p);
+            }
+            else {
+                personality = quoteWithAuthor.split("\\|")[0].trim();
+            }
+
+            Quote quote1 = new Quote(author, quote, personality);
+            list.add(quote1);
         }
         return list;
     }
