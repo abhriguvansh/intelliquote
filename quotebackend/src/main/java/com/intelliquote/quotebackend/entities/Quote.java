@@ -12,12 +12,18 @@ public class Quote {
     private String quoteContent;
     private int flags = 0;
     private boolean approved = true;
+    String personalities;
 
     public Quote(){}
 
-    public Quote(String author, String quoteContent) {
+    public Quote(String author, String quoteContent, String personalities) {
         this.author = author;
         this.quoteContent = quoteContent;
+        this.personalities = personalities;
+    }
+
+    public String getPersonalities() {
+        return personalities;
     }
 
     public void setApproved() {
@@ -70,6 +76,7 @@ public class Quote {
                 ", quoteContent='" + quoteContent + '\'' +
                 ", flags=" + flags +
                 ", approved=" + approved +
+                ", personality=" + personalities +
                 '}';
     }
     public String formattedString() {
