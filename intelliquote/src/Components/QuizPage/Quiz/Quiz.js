@@ -37,6 +37,8 @@ function Quiz(props) {
         {props.answerOptions.map(renderAnswerOptions)}
       </ul>
       <h1 style={{ display: 'none' }}>Openness</h1>
+      <h1 style={{ display: 'none' }}>Conscientiousness</h1>
+      <h1 style={{ display: 'none' }}>Extroversion</h1>
       <h1 style={{ display: 'none' }}>Neuroticism</h1>
       <h1 style={{ display: 'none' }}>Agreeableness</h1>
       <h1 style={{ display: 'none' }}>A little bit of everything</h1>
