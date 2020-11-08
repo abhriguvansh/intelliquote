@@ -18,7 +18,7 @@ it('render email page', () => {
   expect(screen.getAllByText(/Email/i)[0]).toBeInTheDocument();
 });
 
-it('email page accepts input', () => {
+it('ET-1: email page accepts input', () => {
   const history = createMemoryHistory();
   const wrapper = mount(
     <Router history={history}>
@@ -28,7 +28,7 @@ it('email page accepts input', () => {
   expect(wrapper.find('input'));
 });
 
-it('clicking subscribe displays message', () => {
+it('ET-2: clicking subscribe displays message', () => {
   const history = createMemoryHistory();
   render(
     <Router history={history}>
@@ -40,7 +40,7 @@ it('clicking subscribe displays message', () => {
   expect(screen.getByText('Subscribe'));
 });
 
-it('clicking unsubscribe displays message', () => {
+it('ET-3: clicking unsubscribe displays message', () => {
   const history = createMemoryHistory();
   render(
     <Router history={history}>

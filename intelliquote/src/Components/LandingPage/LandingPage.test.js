@@ -26,7 +26,7 @@ it('render landing page', () => {
   expect(screen.getByText(/LandingPage/i));
 });
 
-it('searchbar returns quotes', () => {
+it('SVT-2: searchbar returns quotes', () => {
   const history = createMemoryHistory();
   render(
     <Router history={history}>
@@ -37,7 +37,7 @@ it('searchbar returns quotes', () => {
   expect(screen.getByTestId('quote-container')).toBeInDocument;
 });
 
-it('random button displays quote', () => {
+it('RS-1, RS-2: random button displays quote', () => {
   const history = createMemoryHistory();
   render(
     <Router history={history}>

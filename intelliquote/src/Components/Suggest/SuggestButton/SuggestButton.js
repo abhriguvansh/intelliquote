@@ -5,7 +5,7 @@ import Quote from '../../Quote/Quote'
 function SuggestButton() {
 
     function submitClick(){
-        alert('quote submitted')
+        // alert('quote submitted')
     
     }
     return(

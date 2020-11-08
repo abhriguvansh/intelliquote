@@ -41,30 +41,30 @@ class QuizPage extends React.Component {
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
+      //setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
 
   //use answersCount as well as Math.max to see which personality was most prominent
-  getResults() {
-    const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+  // getResults() {
+  //   const answersCount = this.state.answersCount;
+  //   const answersCountKeys = Object.keys(answersCount);
+  //   const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+  //   const maxAnswerCount = Math.max.apply(null, answersCountValues);
 
-    return answersCountKeys.filter(
-      (key) => answersCount[key] === maxAnswerCount
-    );
-  }
+  //   return answersCountKeys.filter(
+  //     (key) => answersCount[key] === maxAnswerCount
+  //   );
+  // }
 
-  //set the result to the max or 'a little bit of everything' if no prominent personality was detected
-  setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0] });
-    } else {
-      this.setState({ result: 'A little bit of everything' });
-    }
-  }
+  // //set the result to the max or 'a little bit of everything' if no prominent personality was detected
+  // setResults(result) {
+  //   if (result.length === 1) {
+  //     this.setState({ result: result[0] });
+  //   } else {
+  //     this.setState({ result: 'A little bit of everything' });
+  //   }
+  // }
 
   //store the users answer in answerCount
   setUserAnswer(answer) {

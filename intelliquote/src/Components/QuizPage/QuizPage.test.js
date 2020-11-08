@@ -12,7 +12,7 @@ it('renders without crashing', () => {
   shallow(<QuizPage />);
 });
 
-it('choice 1 is the selection for option 1', () => {
+it('QMT-P1: choice 1 is the selection for option 1', () => {
   const history = createMemoryHistory();
   const search = render(
     <Router history={history}>
@@ -28,7 +28,7 @@ it('choice 1 is the selection for option 1', () => {
   expect(screen.getByText('Neuroticism')).toBeInDocument;
 });
 
-it('choice 2 is the selection for option 2', () => {
+it('QMT-P2: choice 2 is the selection for option 2', () => {
   const history = createMemoryHistory();
   const search = render(
     <Router history={history}>
@@ -44,7 +44,7 @@ it('choice 2 is the selection for option 2', () => {
   expect(screen.getByText('Agreeableness')).toBeInDocument;
 });
 
-it('choice 2 is the selection for option 2', () => {
+it('QMT-P3: choice 2 is the selection for option 2', () => {
   const history = createMemoryHistory();
   const search = render(
     <Router history={history}>
@@ -60,7 +60,7 @@ it('choice 2 is the selection for option 2', () => {
   expect(screen.getByText('A little bit of everything')).toBeInDocument;
 });
 
-it('quiz returns a personality', () => {
+it('QMT-O1: quiz returns a personality', () => {
   const history = createMemoryHistory();
   render(
     <Router history={history}>
