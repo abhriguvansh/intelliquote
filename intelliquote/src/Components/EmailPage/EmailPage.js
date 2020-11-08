@@ -18,12 +18,12 @@ class EmailPage extends React.Component {
   }
 
   handleChange(event) {
-    // const target = event.target;
-    // const value = target.value;
-    // const name = target.name;
-    // this.setState({
-    //   [name]: value,
-    // });
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value,
+    });
   }
 
   async handleSubscribe(event) {
@@ -36,12 +36,12 @@ class EmailPage extends React.Component {
     };
     axios
       .post('http://localhost:8080/api/emailRequest', data)
-      // .then((res) => console.log(res.data));
+      .then((res) => console.log(res.data));
     alert(event.target.value);
   }
 
   handleUnsubscribe(event) {
-    // event.preventDefault();
+    event.preventDefault();
   }
   render() {
     return (
