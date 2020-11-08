@@ -17,6 +17,13 @@ public class QuoteHandler {
             throw new IllegalArgumentException("Must enter search term");
         }
         else {
+            if(searchTerm.length() == 1
+                    || searchTerm.equalsIgnoreCase("Agreeableness")
+                    || searchTerm.equalsIgnoreCase("conscientiousness")
+                    || searchTerm.equalsIgnoreCase("neuroticism")
+                    || searchTerm.equalsIgnoreCase("openness")
+                    || searchTerm.equalsIgnoreCase("extroversion"))
+                return quoteDB.searchByPersonality(searchTerm);
             return quoteDB.search(searchTerm);
         }
     }
