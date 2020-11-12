@@ -1,6 +1,5 @@
 package com.intelliquote.quotebackend.controllers;
 
-import com.intelliquote.quotebackend.entities.Quote;
 import com.intelliquote.quotebackend.handlers.EmailHandler;
 import com.intelliquote.quotebackend.handlers.QuoteHandler;
 import com.sendgrid.Response;

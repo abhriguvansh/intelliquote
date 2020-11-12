@@ -6,11 +6,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +32,8 @@ public class LoadQuotesDB {
 
     static ArrayList<Quote> readQuotes(String pathName) throws IOException {
         File quotesFile = new File("quotebackend/src/main/java/com/intelliquote/quotebackend/databases/quotes.txt");
-
-        BufferedReader br = new BufferedReader(new FileReader(quotesFile));
+        InputStream file = new ClassPathResource("quotes.txt").getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(file));
 
         ArrayList<Quote> list = new ArrayList<>();
         String quoteWithAuthor;
@@ -66,5 +65,9 @@ public class LoadQuotesDB {
             list.add(quote1);
         }
         return list;
+    }
+
+    public Resource loadQuotes() {
+        return new ClassPathResource("databases/quotes.txt");
     }
 }
