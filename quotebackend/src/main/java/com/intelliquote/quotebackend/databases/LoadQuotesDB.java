@@ -31,7 +31,6 @@ public class LoadQuotesDB {
     }
 
     static ArrayList<Quote> readQuotes(String pathName) throws IOException {
-        File quotesFile = new File("quotebackend/src/main/java/com/intelliquote/quotebackend/databases/quotes.txt");
         InputStream file = new ClassPathResource("quotes.txt").getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(file));
 
@@ -65,9 +64,5 @@ public class LoadQuotesDB {
             list.add(quote1);
         }
         return list;
-    }
-
-    public Resource loadQuotes() {
-        return new ClassPathResource("databases/quotes.txt");
     }
 }
