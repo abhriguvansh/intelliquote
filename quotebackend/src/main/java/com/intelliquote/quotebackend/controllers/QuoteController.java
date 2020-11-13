@@ -34,4 +34,12 @@ public class QuoteController {
     public List<Quote> getRandom() {
         return quoteHandler.getRandom();
     }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/api/addFlag/{id}")
+    public Quote addFlag(@PathVariable Integer id) {
+        Quote currQuote = quoteDB.findById(id).orElseThrow(RuntimeException::new);
+        currQuote.setFlag();
+        return quoteDB.save(currQuote);
+    }
 }
