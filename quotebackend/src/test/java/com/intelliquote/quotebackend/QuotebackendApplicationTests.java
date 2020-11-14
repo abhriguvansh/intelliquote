@@ -1,7 +1,7 @@
 package com.intelliquote.quotebackend;
 
 import com.intelliquote.quotebackend.controllers.EmailController;
-import com.intelliquote.quotebackend.controllers.EmailRequest;
+import com.intelliquote.quotebackend.Requests.EmailRequest;
 import com.intelliquote.quotebackend.controllers.QuoteController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

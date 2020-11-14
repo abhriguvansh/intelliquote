@@ -1,5 +1,6 @@
 package com.intelliquote.quotebackend.controllers;
 
+import com.intelliquote.quotebackend.Requests.EmailRequest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

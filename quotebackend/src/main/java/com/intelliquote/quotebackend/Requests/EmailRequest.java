@@ -1,4 +1,4 @@
-package com.intelliquote.quotebackend.controllers;
+package com.intelliquote.quotebackend.Requests;
 
 public class EmailRequest {
     private String email;
