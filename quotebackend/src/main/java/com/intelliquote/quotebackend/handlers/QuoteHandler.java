@@ -1,6 +1,7 @@
 package com.intelliquote.quotebackend.handlers;
 
 import com.intelliquote.quotebackend.databases.QuoteDB;
+import com.intelliquote.quotebackend.databases.SuggestedQuoteDB;
 import com.intelliquote.quotebackend.entities.Quote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,9 @@ import java.util.Random;
 public class QuoteHandler {
     @Autowired
     private QuoteDB quoteDB;
+
+    @Autowired
+    private SuggestedQuoteDB suggestedQuoteDB;
 
     public List<Quote> search(String searchTerm) {
         if (searchTerm == null) {
@@ -47,6 +51,6 @@ public class QuoteHandler {
                     HttpStatus.CONFLICT, "Quote is already in database"
             );
         }
-        return quoteDB.save(quote);
+        return suggestedQuoteDB.save(quote);
     }
 }
