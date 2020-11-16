@@ -16,4 +16,7 @@ public interface QuoteDB extends JpaRepository<Quote, Integer> {
 
     @Query("select q from Quote q where q.personalities like %?1% ")
     List<Quote> searchByPersonality(String searchTerm);
+
+    @Query("select q from Quote q where q.flags > 0")
+    List<Quote> getQuoteByFlagged();
 }
