@@ -111,7 +111,7 @@ class QuizPage extends React.Component {
     );
   }
   async getMatchingQuote() {
-    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${this.state.result}`;
+    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${this.state.result[0]}`;
     try {
       const response = await fetch(apiUrl);
       let data = await response.json();
