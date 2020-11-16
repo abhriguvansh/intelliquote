@@ -3,12 +3,14 @@ import './Panel.css';
 import Navbar from '../Navbar/Navbar';
 import SuggestedQuote from '../Suggest/SuggestedQuote/SuggestedQuote';
 import SuggestButton from '../Suggest/SuggestButton/SuggestButton';
+import FlaggedQuote from '../Suggest/FlaggedQuote/FlaggedQuote';
 
 class Panel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes: [],
+      suggested: [],
+      flagged: [],
     };
     this.renderSuggested = this.renderSuggested.bind(this);
     this.renderFlagged = this.renderFlagged.bind(this);
@@ -21,7 +23,7 @@ class Panel extends React.Component {
       const data = await response.json();
       console.log(data);
       this.setState({
-        quotes: data,
+        suggested: data,
       });
     } catch (err) {
       console.log(err);
@@ -35,7 +37,7 @@ class Panel extends React.Component {
       const data = await response.json();
       console.log(data);
       this.setState({
-        quotes: data,
+        flagged: data,
       });
     } catch (err) {
       console.log(err);
@@ -49,7 +51,8 @@ class Panel extends React.Component {
 
         <button onClick={this.renderSuggested}> Get Suggested</button>
         <button onClick={this.renderFlagged}>Get Flagged</button>
-        <SuggestedQuote quotes={this.state.quotes} />
+        <SuggestedQuote quotes={this.state.suggested} />
+        <FlaggedQuote quotes={this.state.flagged} />
       </div>
     );
   }
