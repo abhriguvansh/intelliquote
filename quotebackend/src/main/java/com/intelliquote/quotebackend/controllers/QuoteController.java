@@ -56,8 +56,9 @@ public class QuoteController {
         return quoteHandler.getSuggested();
     }
 
-    @PostMapping("/api/confirmQuote")
-    public Quote confirmQuote(@RequestBody Quote q) {
+    @PostMapping("/api/confirmQuote/{id}")
+    public Quote confirmQuote(@PathVariable Integer id) {
+        Quote q = suggestedQuoteDB.findById(id).orElseThrow(RuntimeException::new);
         q.setApproved();
         return quoteDB.save(q);
     }
