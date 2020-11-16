@@ -15,7 +15,7 @@ public interface QuoteDB extends JpaRepository<Quote, Integer> {
     @Query("select count(q) from Quote q")
     Integer totalQuotes();
 
-    @Query("select q from Quote q where q.personalities like %?1% ")
+    @Query("select q from Quote q where q.personalities like lower(concat('%', ?1, '%')) and q.approved = true ")
     List<Quote> searchByPersonality(String searchTerm);
 
     @Query("select q from Quote q where q.flags > 0")
