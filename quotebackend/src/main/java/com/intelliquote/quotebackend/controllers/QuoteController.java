@@ -2,6 +2,7 @@ package com.intelliquote.quotebackend.controllers;
 
 import com.intelliquote.quotebackend.Requests.SuggestedQuoteRequest;
 import com.intelliquote.quotebackend.databases.QuoteDB;
+import com.intelliquote.quotebackend.databases.SuggestedQuoteDB;
 import com.intelliquote.quotebackend.entities.Quote;
 import com.intelliquote.quotebackend.handlers.QuoteHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,8 @@ public class QuoteController {
     private QuoteHandler quoteHandler;
     @Autowired
     private QuoteDB quoteDB;
+    @Autowired
+    private SuggestedQuoteDB suggestedQuoteDB;
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/search")
@@ -50,5 +53,11 @@ public class QuoteController {
         Quote currQuote = quoteDB.findById(id).orElseThrow(RuntimeException::new);
         currQuote.setFlag();
         return quoteDB.save(currQuote);
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/api/suggested")
+    public List<Quote> getSuggested() {
+        return suggestedQuoteDB.findAll();
     }
 }
