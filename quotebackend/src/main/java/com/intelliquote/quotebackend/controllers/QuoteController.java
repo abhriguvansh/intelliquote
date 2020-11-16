@@ -61,6 +61,11 @@ public class QuoteController {
         return quoteDB.save(q);
     }
 
+    @PostMapping("/api/rejectQuote/{id}")
+    public void rejectQuote(@PathVariable Integer id){
+        suggestedQuoteDB.deleteById(id);
+    }
+
     @GetMapping("/api/flagged")
     public List<Quote> getFlagged() {
         return quoteHandler.getFlagged();
