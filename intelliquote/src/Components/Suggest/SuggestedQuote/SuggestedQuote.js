@@ -41,7 +41,6 @@ export default function SuggestedQuote({ quotes }) {
           <div key={quote.id} className={'quote-div'}>
             <h1 className={'quote'}>{quote.quoteContent}</h1>
             <h2 className={'author'}>{quote.author}</h2>
-            <button onClick={(e) => flagQuote(quote.id, e)}>Flag Quote</button>
             <button onClick={(e) => acceptQuote(quote.id, e)}>Accept</button>
             <button onClick={(e) => rejectQuote(quote.id, e)}>Reject</button>
           </div>
