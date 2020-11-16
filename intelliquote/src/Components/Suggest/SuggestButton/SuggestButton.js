@@ -29,6 +29,9 @@ class SuggestButton extends React.Component {
     axios
       .post(`http://localhost:8080/api/suggestQuote`, quote)
       .then((res) => console.log(res));
+
+    alert('Quote Submitted!');
+    window.location = '/';
   }
   render() {
     return (
