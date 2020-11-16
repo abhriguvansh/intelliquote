@@ -86,4 +86,8 @@ public class Quote {
     public void resetFlags(){
         this.flags = 0;
     }
+
+    public int getFlags() {
+        return flags;
+    }
 }
