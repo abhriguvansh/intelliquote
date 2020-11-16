@@ -17,6 +17,7 @@ class QuizPage extends React.Component {
     super(props);
 
     this.state = {
+      quote: [],
       counter: 0, //start at question 0
       questionId: 1, //display to the user that we are on question 1
       questions: [], //intially there are no questions to display until you grab them from quizQuestions
@@ -110,16 +111,15 @@ class QuizPage extends React.Component {
     );
   }
   async getMatchingQuote() {
-    const apiUrl = `${
-      process.env.REACT_APP_LOCALHOST_URL
-    }/search?query=${this.state.result.charAt(0)}`;
+    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${this.state.result}`;
     try {
       const response = await fetch(apiUrl);
       let data = await response.json();
       let randomNumber = Math.floor(Math.random() * data.length);
       let quote = data[randomNumber];
-      console.log(quote.quoteContent);
-      return quote.quoteContent;
+      this.setState({
+        quote: data,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -140,8 +140,8 @@ class QuizPage extends React.Component {
     return (
       <div data-testid='quiz-div'>
         <Navbar />
-        <h1>{this.state.result}</h1>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        <Quote quotes={this.state.quote} />
       </div>
     );
   }
