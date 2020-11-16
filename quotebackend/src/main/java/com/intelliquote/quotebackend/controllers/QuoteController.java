@@ -80,7 +80,7 @@ public class QuoteController {
         q.resetFlags();
         return quoteDB.save(q);
     }
-    
+
     @PostMapping("/api/removeFlaggedQuote/{id}")
     public void removeFlaggedQuote(@PathVariable Integer id) {
         quoteDB.deleteById(id);
