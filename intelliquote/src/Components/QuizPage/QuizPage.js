@@ -10,6 +10,7 @@ import AnswerOption from './AnswerOption/AnswerOption';
 import Quiz from './Quiz/Quiz';
 import quizQuestions from './quizQuestions';
 import Results from './Results/Results';
+import Quote from '../Quote/Quote';
 
 class QuizPage extends React.Component {
   constructor(props) {
@@ -23,8 +24,10 @@ class QuizPage extends React.Component {
       answer: '', //tracks the most recent answer
       answersCount: {}, //tracks each answer that the user has submitted
       result: '', //the final personality
+      matchingQuote: '',
     };
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.getMatchingQuote = this.getMatchingQuote.bind(this);
   }
   componentDidMount() {
     //when the page is first rendered, set the questions and answer to the 0th element in quizQuestions.js
@@ -106,22 +109,30 @@ class QuizPage extends React.Component {
       </div>
     );
   }
-
-  //render result component
-  async renderResult() {
-    let letter = this.state.result.charAt(0);
-    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${letter}`;
+  async getMatchingQuote() {
+    const apiUrl = `${
+      process.env.REACT_APP_LOCALHOST_URL
+    }/search?query=${this.state.result.charAt(0)}`;
     try {
       const response = await fetch(apiUrl);
-      const data = await response.json();
-      return (
-        <div data-testid='result-div'>
-          <Results quizResult={this.state.result} quote={response} />
-        </div>
-      );
+      let data = await response.json();
+      let randomNumber = Math.floor(Math.random() * data.length);
+      let quote = data[randomNumber];
+      console.log(quote.quoteContent);
+      return quote.quoteContent;
     } catch (err) {
       console.log(err);
     }
+  }
+
+  //render result component
+  renderResult() {
+    this.getMatchingQuote();
+    return (
+      <div data-testid='result-div'>
+        <Results quizResult={this.state.result} />
+      </div>
+    );
   }
 
   //if result is empty render the quiz, otherwise render result
