@@ -60,4 +60,10 @@ public class QuoteController {
     public List<Quote> getSuggested() {
         return suggestedQuoteDB.findAll();
     }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/api/confirmQuote")
+    public Quote confirmQuote(@RequestBody Quote q) {
+        return quoteDB.save(q);
+    }
 }
