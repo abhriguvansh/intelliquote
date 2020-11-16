@@ -12,7 +12,7 @@ public class EmailHandler {
         Email from = new Email("rsh83@case.edu");
         String subject = "Your quote from Intelliquote";
         Email to = new Email(toEmail);
-        Content content = new Content("text/plain", quote.toString());
+        Content content = new Content("text/plain", quote.formattedString());
         Mail mail = new Mail(from, subject, to, content);
         
         SendGrid sg = new SendGrid(System.getenv("EMAIL_API_KEY"));
