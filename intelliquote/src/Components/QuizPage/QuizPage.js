@@ -10,12 +10,14 @@ import AnswerOption from './AnswerOption/AnswerOption';
 import Quiz from './Quiz/Quiz';
 import quizQuestions from './quizQuestions';
 import Results from './Results/Results';
+import Quote from '../Quote/Quote';
 
 class QuizPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      quote: [],
       counter: 0, //start at question 0
       questionId: 1, //display to the user that we are on question 1
       questions: [], //intially there are no questions to display until you grab them from quizQuestions
@@ -23,8 +25,10 @@ class QuizPage extends React.Component {
       answer: '', //tracks the most recent answer
       answersCount: {}, //tracks each answer that the user has submitted
       result: '', //the final personality
+      matchingQuote: '',
     };
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.getMatchingQuote = this.getMatchingQuote.bind(this);
   }
   componentDidMount() {
     //when the page is first rendered, set the questions and answer to the 0th element in quizQuestions.js
@@ -63,6 +67,77 @@ class QuizPage extends React.Component {
       this.setState({ result: result[0] });
     } else {
       this.setState({ result: 'A little bit of everything' });
+    }
+    switch (this.state.result[0]) {
+      case 'N':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'Try not to become a man of success but rather to become a man of value.',
+              author: 'Albert Einstein',
+              personality: 'N',
+            },
+          ],
+        });
+        break;
+      case 'O':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'Most folks are as happy as they make up their minds to be.',
+              author: 'Abraham Lincoln',
+              personality: 'O',
+            },
+          ],
+        });
+        break;
+      case 'C':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'After all is said and done, more is said than done.',
+              author: 'Aesop',
+              personality: 'C',
+            },
+          ],
+        });
+        break;
+      case 'E':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'The purpose of human life is to serve, and to show compassion and the will to help others.',
+              author: 'Albert Schweitzer',
+              personality: 'E',
+            },
+          ],
+        });
+        break;
+      case 'A':
+        this.setState({
+          quote: [
+            {
+              quoteContent: `The greatest magnifying glasses in the world are a man's own eyes when they look upon his own person.`,
+              author: 'Alexander Pope',
+              personality: 'A',
+            },
+          ],
+        });
+        break;
+      default:
+        this.setState({
+          quote: [
+            {
+              quoteContent: `Every time you get angry, you poison your own system.`,
+              author: 'Alfred A. Montapert',
+              personality: 'C',
+            },
+          ],
+        });
     }
   }
 
@@ -106,6 +181,20 @@ class QuizPage extends React.Component {
       </div>
     );
   }
+  async getMatchingQuote() {
+    const apiUrl = `${process.env.REACT_APP_LOCALHOST_URL}/search?query=${this.state.result[0]}`;
+    try {
+      const response = await fetch(apiUrl);
+      let data = await response.json();
+      let randomNumber = Math.floor(Math.random() * data.length);
+      let quote = data[randomNumber];
+      this.setState({
+        quote: data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   //render result component
   renderResult() {
@@ -121,8 +210,8 @@ class QuizPage extends React.Component {
     return (
       <div data-testid='quiz-div'>
         <Navbar />
-        <h1>{this.state.result}</h1>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        <Quote quotes={this.state.quote} />
       </div>
     );
   }

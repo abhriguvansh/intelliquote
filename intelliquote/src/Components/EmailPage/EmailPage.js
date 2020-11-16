@@ -14,6 +14,7 @@ class EmailPage extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubscribe = this.handleSubscribe.bind(this);
+    this.handleUnsubscribe = this.handleSubscribe.bind(this);
   }
 
   handleChange(event) {
@@ -27,9 +28,7 @@ class EmailPage extends React.Component {
 
   async handleSubscribe(event) {
     event.preventDefault();
-    console.log(
-      `email: ${this.state.email} int: ${this.state.interval} p: ${this.state.personality}`
-    );
+
     const data = {
       email: this.state.email,
       interval: this.state.interval,
@@ -38,6 +37,11 @@ class EmailPage extends React.Component {
     axios
       .post('http://localhost:8080/api/emailRequest', data)
       .then((res) => console.log(res.data));
+    alert(event.target.value);
+  }
+
+  handleUnsubscribe(event) {
+    event.preventDefault();
   }
   render() {
     return (
@@ -149,10 +153,21 @@ class EmailPage extends React.Component {
           </div>
           <div className='button-div'>
             {' '}
-            <button className='submit' onClick={this.handleSubscribe}>
+            <button
+              className='submit'
+              data-testid='sub'
+              onClick={this.handleSubscribe}
+              value='subscribe'
+            >
               Subscribe
             </button>
-            <button className='submit'>Unsubscribe</button>
+            <button
+              className='submit'
+              value='unsubscribe'
+              onClick={this.handleUnsubscribe}
+            >
+              Unsubscribe
+            </button>
           </div>
         </form>
       </div>

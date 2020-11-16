@@ -12,7 +12,8 @@ it('render searchbar', () => {
   shallow(<SearchBar />);
 });
 
-it('searchbar accepts input', () => {
+it('SVT-1: searchbar accepts input', () => {
   const wrapper = mount(<SearchBar />);
   expect(wrapper.find('input'));
 });
+
