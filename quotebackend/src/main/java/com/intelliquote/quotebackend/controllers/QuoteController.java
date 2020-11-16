@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 @RestController
 public class QuoteController {
@@ -38,10 +37,18 @@ public class QuoteController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/api/suggestQuote")
-    public List<Quote> suggestQuote(@RequestBody SuggestedQuoteRequest suggestedQuote){
+    public List<Quote> suggestQuote(@RequestBody SuggestedQuoteRequest suggestedQuote) {
         Quote quote = new Quote(suggestedQuote.getAuthor(), suggestedQuote.getQuoteContent(), suggestedQuote.getPersonalityType());
         List<Quote> response = new ArrayList<>(1);
         response.add(quoteHandler.suggestQuote(quote));
         return response;
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/api/addFlag/{id}")
+    public Quote addFlag(@PathVariable Integer id) {
+        Quote currQuote = quoteDB.findById(id).orElseThrow(RuntimeException::new);
+        currQuote.setFlag();
+        return quoteDB.save(currQuote);
     }
 }
