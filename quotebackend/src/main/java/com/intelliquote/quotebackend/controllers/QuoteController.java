@@ -59,6 +59,7 @@ public class QuoteController {
     @PostMapping("/api/confirmQuote/{id}")
     public Quote confirmQuote(@PathVariable Integer id) {
         Quote q = suggestedQuoteDB.findById(id).orElseThrow(RuntimeException::new);
+        suggestedQuoteDB.deleteById(id);
         q.setApproved();
         return quoteDB.save(q);
     }
