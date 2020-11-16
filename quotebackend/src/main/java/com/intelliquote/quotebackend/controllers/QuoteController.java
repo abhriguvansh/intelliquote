@@ -20,13 +20,13 @@ public class QuoteController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/search")
-    public List<Quote> search(@RequestParam String query){
+    public List<Quote> search(@RequestParam String query) {
         return quoteHandler.search(query);
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/getAll")
-    public List<Quote> getAll(){
+    public List<Quote> getAll() {
         return quoteDB.findAll();
     }
 
@@ -38,10 +38,18 @@ public class QuoteController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/api/suggestQuote")
-    public List<Quote> suggestQuote(@RequestBody SuggestedQuoteRequest suggestedQuote){
+    public List<Quote> suggestQuote(@RequestBody SuggestedQuoteRequest suggestedQuote) {
         Quote quote = new Quote(suggestedQuote.getAuthor(), suggestedQuote.getQuoteContent(), suggestedQuote.getPersonalityType());
         List<Quote> response = new ArrayList<>(1);
         response.add(quoteHandler.suggestQuote(quote));
         return response;
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/api/addFlag/{id}")
+    public Quote addFlag(@PathVariable Integer id) {
+        Quote currQuote = quoteDB.findById(id).orElseThrow(RuntimeException::new);
+        currQuote.setFlag();
+        return quoteDB.save(currQuote);
     }
 }
