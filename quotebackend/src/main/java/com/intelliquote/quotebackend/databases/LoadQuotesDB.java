@@ -61,6 +61,7 @@ public class LoadQuotesDB {
             }
 
             Quote quote1 = new Quote(author, quote, personality);
+            quote1.setApproved();
             list.add(quote1);
         }
         return list;

@@ -11,7 +11,7 @@ public class Quote {
     @Column(length = 1000)
     private String quoteContent;
     private int flags = 0;
-    private boolean approved = true;
+    private boolean approved = false;
     String personalities;
 
     public Quote(){}

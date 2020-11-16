@@ -57,4 +57,8 @@ public class QuoteHandler {
     public List<Quote> getFlagged(){
         return quoteDB.getQuoteByFlagged();
     }
+
+    public List<Quote> getSuggested() {
+        return suggestedQuoteDB.getAllBySuggested();
+    }
 }

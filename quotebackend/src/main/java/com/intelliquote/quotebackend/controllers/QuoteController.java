@@ -53,11 +53,12 @@ public class QuoteController {
 
     @GetMapping("/api/suggested")
     public List<Quote> getSuggested() {
-        return suggestedQuoteDB.findAll();
+        return quoteHandler.getSuggested();
     }
 
     @PostMapping("/api/confirmQuote")
     public Quote confirmQuote(@RequestBody Quote q) {
+        q.setApproved();
         return quoteDB.save(q);
     }
 
