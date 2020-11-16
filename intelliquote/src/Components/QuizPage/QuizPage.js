@@ -68,6 +68,77 @@ class QuizPage extends React.Component {
     } else {
       this.setState({ result: 'A little bit of everything' });
     }
+    switch (this.state.result[0]) {
+      case 'N':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'Try not to become a man of success but rather to become a man of value.',
+              author: 'Albert Einstein',
+              personality: 'N',
+            },
+          ],
+        });
+        break;
+      case 'O':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'Most folks are as happy as they make up their minds to be.',
+              author: 'Abraham Lincoln',
+              personality: 'O',
+            },
+          ],
+        });
+        break;
+      case 'C':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'After all is said and done, more is said than done.',
+              author: 'Aesop',
+              personality: 'C',
+            },
+          ],
+        });
+        break;
+      case 'E':
+        this.setState({
+          quote: [
+            {
+              quoteContent:
+                'The purpose of human life is to serve, and to show compassion and the will to help others.',
+              author: 'Albert Schweitzer',
+              personality: 'E',
+            },
+          ],
+        });
+        break;
+      case 'A':
+        this.setState({
+          quote: [
+            {
+              quoteContent: `The greatest magnifying glasses in the world are a man's own eyes when they look upon his own person.`,
+              author: 'Alexander Pope',
+              personality: 'A',
+            },
+          ],
+        });
+        break;
+      default:
+        this.setState({
+          quote: [
+            {
+              quoteContent: `Every time you get angry, you poison your own system.`,
+              author: 'Alfred A. Montapert',
+              personality: 'C',
+            },
+          ],
+        });
+    }
   }
 
   //store the users answer in answerCount
@@ -127,7 +198,6 @@ class QuizPage extends React.Component {
 
   //render result component
   renderResult() {
-    this.getMatchingQuote();
     return (
       <div data-testid='result-div'>
         <Results quizResult={this.state.result} />
