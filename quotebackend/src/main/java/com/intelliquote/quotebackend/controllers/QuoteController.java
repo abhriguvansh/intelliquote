@@ -72,4 +72,15 @@ public class QuoteController {
     public List<Quote> getFlagged() {
         return quoteHandler.getFlagged();
     }
+
+    @PostMapping("/api/resetFlags{id}")
+    public void resetFlag(@PathVariable Integer id) {
+        Quote q = quoteDB.findById(id).orElseThrow(RuntimeException::new);
+        q.resetFlags();
+    }
+
+    @PostMapping("/api/removeFlaggedQuote{id}")
+    public void removeFlaggedQuote(@PathVariable Integer id) {
+        quoteDB.deleteById(id);
+    }
 }

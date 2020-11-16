@@ -82,4 +82,8 @@ public class Quote {
     public String formattedString() {
         return quoteContent + " - " + author;
     }
+
+    public void resetFlags(){
+        this.flags = 0;
+    }
 }
