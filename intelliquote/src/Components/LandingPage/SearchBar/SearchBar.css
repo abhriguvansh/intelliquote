@@ -15,7 +15,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
-  background-color: #001b2e;
+  background-color: #adb6c4;
   border: 2px solid #294c60;
   border-radius: 10px;
 }
@@ -37,4 +37,3 @@
 label {
   color: white;
 }
-/*# sourceMappingURL=SearchBar.css.map */

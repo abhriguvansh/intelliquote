@@ -6,11 +6,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,31 +31,37 @@ public class LoadQuotesDB {
     }
 
     static ArrayList<Quote> readQuotes(String pathName) throws IOException {
-        File quotesFile = new File("quotebackend/src/main/java/com/intelliquote/quotebackend/databases/quotes.txt");
-
-        BufferedReader br = new BufferedReader(new FileReader(quotesFile));
+        InputStream file = new ClassPathResource("quotes.txt").getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(file));
 
         ArrayList<Quote> list = new ArrayList<>();
         String quoteWithAuthor;
         while ((quoteWithAuthor = br.readLine()) != null) {
             int separator = quoteWithAuthor.lastIndexOf(" - ");
 
-            if (separator >= 1) {
-                String quote = quoteWithAuthor.substring(0, separator)
-                        .trim();
-                String author = quoteWithAuthor.substring(separator + 2)
-                        .trim();
+            String quote, author, personality;
 
-                Quote quote1 = new Quote(author, quote);
-                list.add(quote1);
+            if (separator >= 1) {
+                quote = quoteWithAuthor.substring(0, separator)
+                        .trim();
+                author = quoteWithAuthor.substring(separator + 2)
+                        .trim();
             }
             else {
-                String quote = quoteWithAuthor.trim();
-                String author = "Unknown";
-
-                Quote quote1 = new Quote(author, quote);
-                list.add(quote1);
+                quote = quoteWithAuthor.trim();
+                author = "Unknown";
             }
+            if(!author.equals("Unknown")){
+                author = author.split("\\|")[0].trim();
+                char p = quoteWithAuthor.charAt(quoteWithAuthor.length()-1);
+                personality = Character.toString(p);
+            }
+            else {
+                personality = quoteWithAuthor.split("\\|")[0].trim();
+            }
+
+            Quote quote1 = new Quote(author, quote, personality);
+            list.add(quote1);
         }
         return list;
     }

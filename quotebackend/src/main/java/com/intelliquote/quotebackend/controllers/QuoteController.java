@@ -1,5 +1,6 @@
 package com.intelliquote.quotebackend.controllers;
 
+import com.intelliquote.quotebackend.Requests.SuggestedQuoteRequest;
 import com.intelliquote.quotebackend.databases.QuoteDB;
 import com.intelliquote.quotebackend.entities.Quote;
 import com.intelliquote.quotebackend.handlers.QuoteHandler;
@@ -32,10 +33,15 @@ public class QuoteController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/getRandom")
     public List<Quote> getRandom() {
-        Random rand = new Random();
-        List<Quote> q = new ArrayList<>();
-        q.add(quoteDB.findById(rand.nextInt(quoteDB.totalQuotes())+1)
-                .orElseThrow(() -> new RuntimeException("An error has occurred")));
-        return q;
+        return quoteHandler.getRandom();
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/api/suggestQuote")
+    public List<Quote> suggestQuote(@RequestBody SuggestedQuoteRequest suggestedQuote){
+        Quote quote = new Quote(suggestedQuote.getAuthor(), suggestedQuote.getQuoteContent(), suggestedQuote.getPersonalityType());
+        List<Quote> response = new ArrayList<>(1);
+        response.add(quoteHandler.suggestQuote(quote));
+        return response;
     }
 }
