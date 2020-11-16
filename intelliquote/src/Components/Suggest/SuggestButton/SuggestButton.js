@@ -31,7 +31,6 @@ class SuggestButton extends React.Component {
       .then((res) => console.log(res));
 
     alert('Quote Submitted!');
-    window.location = '/';
   }
   render() {
     return (

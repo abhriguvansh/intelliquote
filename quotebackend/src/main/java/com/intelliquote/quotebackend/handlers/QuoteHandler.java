@@ -53,4 +53,12 @@ public class QuoteHandler {
         }
         return suggestedQuoteDB.save(quote);
     }
+
+    public List<Quote> getFlagged(){
+        return quoteDB.getQuoteByFlagged();
+    }
+
+    public List<Quote> getSuggested() {
+        return suggestedQuoteDB.getAllBySuggested();
+    }
 }

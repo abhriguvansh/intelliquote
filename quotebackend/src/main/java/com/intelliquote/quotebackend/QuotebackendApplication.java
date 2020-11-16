@@ -11,4 +11,3 @@ public class QuotebackendApplication {
 	}
 
 }
-1
