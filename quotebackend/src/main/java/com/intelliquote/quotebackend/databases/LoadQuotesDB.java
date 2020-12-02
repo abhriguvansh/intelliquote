@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -22,7 +21,7 @@ public class LoadQuotesDB {
 
     @Bean
     CommandLineRunner initDatabase(QuoteDB quoteDB) throws IOException {
-        this.quotes = LoadQuotesDB.readQuotes("quotes.txt");
+        this.quotes = LoadQuotesDB.readQuotes();
         return args -> {
             for (Quote quote : quotes) {
                 log.info("Loading " + quoteDB.save(quote));
@@ -30,7 +29,7 @@ public class LoadQuotesDB {
         };
     }
 
-    static ArrayList<Quote> readQuotes(String pathName) throws IOException {
+    static ArrayList<Quote> readQuotes() throws IOException {
         InputStream file = new ClassPathResource("quotes.txt").getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(file));
 
