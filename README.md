@@ -4,9 +4,9 @@
 ---
 Technologies Required:
 
-*Java 8
+* Java 8
 
-*Apache Maven
+* Apache Maven
 
 ---
 To begin running the backend, you must first install both dependencies.  
