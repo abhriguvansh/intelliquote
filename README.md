@@ -93,7 +93,7 @@ Technologies Required:
 
 To begin running the backend, you must first install both dependencies.
 
-Then, navigating to the folder containing the **POM.XML** file, run:
+Then, navigating to the quotebackend folder containing the **POM.XML** file, run:
 
 ```
 mvn package
