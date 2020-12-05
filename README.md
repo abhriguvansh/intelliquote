@@ -37,7 +37,7 @@ Technologies Required:
 
 ---
 
-To begin running, make sure you have all the technologies required.
+To begin running, make sure you have all the technologies required
 
 Navigate to the _intelliquote_ folder and run the command
 
@@ -55,4 +55,6 @@ npm start
 
 This should start a local server on `localhost:3000`
 
-You are now able to access our software. Note that the backend should be running in order to access all the features.
+Navigate to `localhost:3000` on your web browser
+
+You are now able to access our software. Note that the backend should be running in order to access all the features
